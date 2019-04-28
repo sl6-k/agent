@@ -1,0 +1,48 @@
+<!--pages/home/budgetList/budgetList.wxml-->
+<view class='container'>
+  <view class='selectBox'>
+    <view class='selectList' bindtap='getShop'>
+      <text>{{particulars.Paymenttype==''?'收支类型':particulars.Paymenttype}}</text>
+      <view class='icon'>
+        <image src='https://image.fitfix.shop/shop/icon/iconB2.png'></image>
+      </view>
+    </view>
+    <view class='selectList' bindtap='getSortName'>
+      <text>{{particulars.timeString==''?"订单时间":particulars.timeString}}</text>
+      <view class='icon'>
+        <image src='https://image.fitfix.shop/shop/icon/iconB2.png'></image>
+      </view>
+    </view>
+  </view>
+  <!-- 收支记录 -->
+  <view class='budget'>
+    <block wx:for="{{rows}}" wx:key>
+      <view class='padded-15 budgetInfo'>
+        <view>
+          <view class='padding-b-5'>{{item.BalanceTypeString}}</view>
+          <text>{{item.CreateDate}}</text>
+        </view>
+        <view class='padding-t-10 padding-b-10 money' style="{{item.BalanceType==1?'color:#5bb955;':'color:#ffb12a;'}}">{{item.BalanceType==1?'+':'-'}}{{item.Money}}</view>
+      </view>
+    </block>
+  </view>
+
+  <view class='loadingMsg' wx:if="{{loadingComplete&&rows.length>0}}">
+    <text>~~没有更多了~~</text>
+  </view>
+  <view class='loadingMsg' wx:if="{{pageCount>pageNumber}}">
+    <text>上拉加载更多  >></text>
+  </view>
+  <view class='loadingMsg' wx:if="{{loading}}">
+    <view class="weui-loading"></view>
+    <view class="weui-loadmore__tips">正在加载</view>
+  </view>
+  <view class='none' wx:if="{{rows==null || rows.length==0}}">
+    <view class='icon'>
+      <image src='https://image.fitfix.shop/shop/icon/none.png' mode='widthFix'></image>
+    </view>
+    <view class='loadingMsg'>
+      <text>~~暂无数据~~</text>
+    </view>
+  </view>
+</view>

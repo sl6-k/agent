@@ -1,0 +1,68 @@
+.content{
+  margin-top: 15px;
+  background: white;
+  padding: 15px;
+}
+.text{
+  margin: 5px 0px;
+}
+.hr{
+  width: 99%;
+  margin: 10px auto;
+  height: 1px;
+  background: #f0f0f0;
+}
+.Goods{
+  display: flex;
+  margin: 20px 0px;
+}
+.Goods .img-wrap{
+  width: 15%;
+  height: 100%;
+}
+image{
+  width: 40px;
+  height: 40px;
+}
+.goodsInfo{
+  width: 70%;
+}
+.goodsName{
+  font-size: 14px;
+}
+.goodsSp{
+  margin-top: 5px;
+  font-size: 12px;
+}
+.goodsPrice{
+  width: 15%;
+  text-align: right;
+}
+.goodsNum{
+  font-size: 10px;
+  margin-top: 20px;
+}
+.textPrice{
+  display: flex;
+  margin-top: 5px;
+}
+.textPrice text:nth-child(1){
+  width: 70%
+}
+.textPrice text:nth-child(2){
+  width: 30%;
+  text-align: right;
+  color: #ffb12a;
+}
+.bg{
+  display: inline-block;
+  width: 3px;
+  height: 20px;
+  background: #ffb12a;
+  margin-bottom: -5px;
+  margin-right: 5px;
+  border-radius: 2px;
+}
+.bgWrap{
+  margin-top: 10px;
+}

@@ -1,0 +1,61 @@
+/* pages/setting/setBank/setBank.wxss */
+/* 列表的分割线 */
+
+.dividingLine:before {
+  content: " ";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 1px;
+  border-top: 1px solid #d9d9d9;
+  color: #d9d9d9;
+  -webkit-transform-origin: 0 0;
+  transform-origin: 0 0;
+  -webkit-transform: scaleY(0.5);
+  transform: scaleY(0.5);
+}
+
+.dividingLine:after {
+  content: " ";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 1px;
+  border-bottom: 0px solid #d9d9d9;
+  color: #d9d9d9;
+  -webkit-transform-origin: 0 100%;
+  transform-origin: 0 100%;
+  -webkit-transform: scaleY(0.5);
+  transform: scaleY(0.5);
+}
+.picker {
+  color: #808080;
+}
+.input{
+  text-align: right;
+  width: 200px;
+}
+.weui_cells{
+  margin-top: 1px;
+}
+.container{
+  background: white;
+  padding-top: 15px;
+}
+.btnWrap{
+  width: 100%;
+  border-top: 1px solid #d9d9d9;
+}
+.btn{
+  width: 90%;
+  height: 40px;
+  line-height: 40px;
+  font-size: 20px;
+  color: white;
+  margin-left: 5%;
+  border-radius: 20px;
+  margin-top: 20px;
+  background: #ffb12a;
+}

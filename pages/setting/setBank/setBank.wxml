@@ -1,0 +1,41 @@
+<!--pages/setting/setBank/setBank.wxml-->
+<view class='container'>
+  <view class="weui_cells weui_cells_access dividingLine">
+    <a class="weui_cell font-size-14">
+      <view class="weui_cell_bd weui_cell_primary">
+        <p>银行名称</p>
+      </view>
+      <picker bindchange="bindPickerChange" value="{{index}}" range="{{BankList}}">
+        <view class="{{bankInfo.bankName ==''|| bankInfo.bankName==null || bankInfo.bankName==undefined?'picker':''}}">
+          {{bankInfo.bankName ==''|| bankInfo.bankName==null || bankInfo.bankName==undefined? '请选择银行' : bankInfo.bankName}}
+        </view>
+      </picker>
+      <view class="weui_cell_ft"></view>
+    </a>
+  </view>
+  <view class="weui_cells weui_cells_access dividingLine">
+    <a class="weui_cell font-size-14">
+      <view class="weui_cell_bd weui_cell_primary">
+        <p>开户名</p>
+      </view>
+      <view class="weui-cell__bd">
+        <input class="weui-input input" type="text" value="{{bankInfo.bankCardAccount}}" placeholder="请输入开户姓名" bindinput="getAccount" />
+      </view>
+      <view class="weui_cell_ft"></view>
+    </a>
+  </view>
+  <view class="weui_cells weui_cells_access dividingLine">
+    <a class="weui_cell font-size-14">
+      <view class="weui_cell_bd weui_cell_primary">
+        <p>银行卡号</p>
+      </view>
+      <view class="weui-cell__bd">
+        <input class="weui-input input" type="number" value="{{bankInfo.bankCardNo}}" placeholder="请输入银行卡号" bindinput="getAccountNo" />
+      </view>
+      <view class="weui_cell_ft"></view>
+    </a>
+  </view>
+  <view class='btnWrap'>
+    <button class='btn' bindtap='saveBank'>确认绑定</button>
+  </view>
+</view>

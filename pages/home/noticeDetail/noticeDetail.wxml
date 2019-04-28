@@ -1,0 +1,23 @@
+<!--pages/home/noticeDetail/noticeDetail.wxml-->
+<view class='container'>
+  <view class='notice-bg' style='height:200px;background:#ffb12a;'>
+    <view style='padding:15px;text-align:center;margin-b-15'>
+      <view style='padding-top:15px;'>
+        <image src='https://image.fitfix.shop/Agent/icon/success.png' mode='widthFix' style='width:10%;'></image>
+      </view>
+      <view style='margin-top:10px;color:#fff;font-size:16px;'>提现申请成功</view>
+    </view>
+    <view class='notice-detail' style='background:#fff;padding:15px;font-size:16px;margin:15px;height:200px;position:absolute;border-radius:15px;color:#464646;'>
+      <view class='margin-15'>
+        <view style='color:#959595;border-bottom:1rpx solid #fafafa;' class='margin-t-15 padding-b-15'>商家已经通过你的提现申请，请查看你的提现账号是否到账。</view>
+        <view class='margin-t-15'>
+          <view class='margin-b-10'>申请时间：2018-06-12 12:05</view>
+          <view class='margin-b-10'>申请金额：
+            <text style='color:#5bb955;'>￥25.00</text>
+          </view>
+          <view>提现账户：木小呆(微信零钱)</view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

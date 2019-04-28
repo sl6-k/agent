@@ -1,0 +1,92 @@
+/* pages/home/spreadOrder/spreadOrder.wxss */
+
+.container {
+}
+
+.swiper-tab {
+  display: flex;
+  width: 100%;
+  border-top: 1rpx solid #fafafa;
+  background: #fff;
+  text-align: center;
+  font-size: 14px;
+  font-weight: bold;
+  position: fixed;
+  left: 0;
+  right: 0;
+  z-index: 6;
+}
+
+.swiper-tab-item {
+  display: inline-block;
+  width: 50%;
+  color: #b9b9b9;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.active {
+  color: #3a3a3a;
+  border-bottom: 4rpx solid #ffb12a;
+}
+
+/* 文字最多显示两行 */
+
+.ell-rows-2 {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+}
+
+/* 推广订单样式 */
+
+.flex {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+}
+
+.flex-1 {
+  display: flex;
+  flex: 1;
+}
+
+.spreadOrder {
+  background: #fff;
+  border-radius: 15px;
+}
+
+.spreadOrder .orderNum {
+  border-bottom: 2rpx solid #fbfbfb;
+}
+
+.spreadOrder .font-color {
+  color: #ffb12a;
+}
+
+.spreadOrder .income {
+  text-align: center;
+  border-top: 2rpx solid #fafafa;
+}
+
+.spreadOrder .income .color {
+  color: #ffb12a;
+}
+
+.spreadOrder .income .income-left {
+  width: 50%;
+  border-right: 1rpx solid #fafafa;
+}
+
+.spreadOrder .income .income-right {
+  width: 50%;
+  border-left: 1rpx solid #fafafa;
+}
+
+.loadingMsg {
+  text-align: center;
+  font-size: 14px;
+  color: #ccc;
+  padding: 10px 0;
+}

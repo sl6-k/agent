@@ -1,0 +1,10 @@
+<!--pages/home/ruleSpre/ruleSpre.wxml-->
+<view>
+<text class='title'>推广规则具体如下：</text>
+<text>1.邀请好友扫码注册成为推客</text>
+<text>2.好友邀请的客户成功购买商品我也可得分润</text>
+<text>3.分润金额根据订单金额的多少取*%为自己的分润</text>
+<text>4.分润金额自动打入自己的飞雳士账户</text>
+<text>5.账户余额>0即可提现</text>
+<text>6.提现金额将在7个工作日内到达个人账户</text>
+</view>

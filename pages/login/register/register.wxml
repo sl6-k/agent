@@ -1,0 +1,63 @@
+<!-- 注册 -->
+<view class='container '>
+  <!-- logo -->
+  <view class='logoBox'>
+    <image src='https://image.fitfix.shop/shop/banner/logo.png' mode='widthFix'></image>
+  </view>
+  <!-- 内容 -->
+  <view class='content'>
+    <!-- form -->
+    <view class="formBox">
+      <!-- welocome -->
+      <view class='hi'>
+        <image src='https://image.fitfix.shop/Agent/icon/hi.png' mode='widthFix'></image>
+      </view>
+      <!-- btn > 注册 -->
+      <view class='welcome flexCenter'>
+        <text>欢迎注册代理系统</text>
+        <navigator url='../login/login' hover-class='none'>登录></navigator>
+      </view>
+      <!-- input -->
+      <view class='inputBox'>
+        <view class='groupInput flexCenter'>
+          <view class='inpuIcon '>
+            <image src='../../../image/name.png'></image>
+          </view>
+          <input type='type' placeholder="请输入姓名" value="{{register.name}}" class='input' bindinput='name' />
+        </view>
+        <view class='groupInput flexCenter'>
+          <view class='inpuIcon '>
+            <image src='https://image.fitfix.shop/Agent/icon/user.png'></image>
+          </view>
+          <input type='number' placeholder="请输入手机号码" value="{{register.phoneNum}}" class='input' bindinput='phoneNum' />
+        </view>
+        <view class='groupInput flexCenter'>
+          <view class='inpuIcon '>
+            <image src='https://image.fitfix.shop/Agent/icon/code1.png'></image>
+          </view>
+          <input type='number' placeholder="请输入验证码" value="{{register.verifyCode}}" class='input' bindinput='verifyCode' />
+          <!-- disabled -->
+          <view class="getCodeStyle {{disabled?'disabled':''}}">
+            <text bindtap="{{disabled?'':'getVerificationCode'}}">{{time}}</text>
+          </view>
+        </view>
+        <view class='groupInput flexCenter'>
+          <view class='inpuIcon '>
+            <image src='https://image.fitfix.shop/Agent/icon/pass.png'></image>
+          </view>
+          <input type='password' placeholder="请输入密码" value="{{register.userPwd}}" class='input' bindinput='userPwd' />
+        </view>
+        <view class='groupInput flexCenter'>
+          <view class='inpuIcon '>
+            <image src='https://image.fitfix.shop/Agent/icon/code2.png'></image>
+          </view>
+          <input type='number' placeholder="请输入邀请码" value="{{register.inviteCode}}" class='input' bindinput='inviteCode' />
+        </view>
+        <view class='submitBox' bindtap='register'>
+          <button>注册</button>
+        </view>
+
+      </view>
+    </view>
+  </view>
+</view>

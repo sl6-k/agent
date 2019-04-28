@@ -1,0 +1,42 @@
+{
+  "pages": [
+    "pages/login/login/login",
+    "pages/home/home/home",
+    "pages/home/invitationDetails/invitationDetails",
+    "pages/login/register/register",
+    "pages/home/invitationList/invitationList",
+    "pages/home/spread/orderInformation/orderInformation",
+    "pages/home/noticeDetail/noticeDetail",
+    "pages/home/cashWithdrawal/cashWithdrawal",
+    "pages/home/cashNotice/cashNotice",
+    "pages/home/spread/spreadOrder/spreadOrder",
+    "pages/home/budgetList/budgetList",
+    "pages/home/spread/spread/spread",
+    "pages/home/invitation/invitation",
+    "pages/setting/personalCenter/personalCenter",
+    "pages/setting/index/index",
+    "pages/setting/setBank/setBank",
+    "pages/setting/userData/userData",
+    "pages/login/resetPwd/resetPwd",
+    "pages/setting/modifyPwd/modifyPwd",
+    "pages/setting/about/about",
+    "pages/setting/customerService/customerService",
+    "pages/home/rule/rule",
+    "pages/home/ruleSpre/ruleSpre"
+  ],
+  "window": {
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "飞雳士安全轮胎推广系统",
+    "backgroundColor": "#fff",
+    "backgroundTextStyle": "dark",
+    "enablePullDownRefresh": false
+  },
+  "navigateToMiniProgramAppIdList": [
+    "wxb16e70ee139561f1",
+    "wxce5bc16545128121",
+    "wxccbf5f0d98de9697",
+    "wxb1a138c89c8fbbc2"
+  ],
+  "sitemapLocation": "sitemap.json"
+}

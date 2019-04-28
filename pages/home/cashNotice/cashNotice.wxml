@@ -1,0 +1,20 @@
+<!--pages/home/cashNotice/cashNotice.wxml-->
+<view class='container'>
+  <view class='padded-15 border' wx:for='{{rows}}' wx:key>
+    <view class='cashStatus' style="{{item.MessageTextHead=='提现失败'?'color:#e60012;':''}}">{{item.MessageTextHead}}</view>
+    <view class='cashDate'>{{item.SendMessageTime}}</view>
+    <view class='cashDetail'>{{item.MessageText}}</view>
+  </view>
+  <text class='infoText' wx:if="{{loadingComplete&&rows.length!=0}}">~~没有更多了~~</text>
+  <text class='infoText' wx:if="{{loading}}">~~上拉加载更多~~</text>
+  <view wx:if="{{rows ==null ||rows.length<=0}}">
+    <view class='none'>
+      <view class='icon'>
+        <image src='https://image.fitfix.shop/shop/icon/none.png' mode='widthFix'></image>
+      </view>
+      <view>
+        <text>~~暂无数据~~</text>
+      </view>
+    </view>
+  </view>
+</view>

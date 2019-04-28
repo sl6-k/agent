@@ -1,0 +1,54 @@
+<view class='container'>
+  <view class='content'>
+    <view class='header'>
+      <text class='orderNo'>订单状态：</text>
+      <text class='orderStatus'>{{information.OrderStateName}}</text>
+    </view>
+    <view class='hr'></view>
+    <view class='userInfo'>
+      <view class='text'>会员姓名：{{information.Consignee}}</view>
+      <view class='text'>会员编号：{{information.UserID}}</view>
+    </view>
+    <view class='bgWrap'>商　　品：</view>
+    <view class='hr'></view>
+    <view class='GoodsList'>
+      <view class='Goods' wx:for='{{goodsList}}' wx:key>
+        <view class='img-wrap'>
+          <image src='{{item.GoodsImage}}'></image>
+        </view>
+        <view class='goodsInfo'>
+          <view class='goodsName'>{{item.GoodsName}}</view>
+          <view class='goodsSp'>
+            <text>规格：</text>
+            <block wx:for-item="specItem" wx:for="{{item.GoodsSpec}}" wx:key>
+              <text>{{specItem}}</text>
+            </block>
+          </view>
+        </view>
+        <view class='goodsPrice'>
+          <view class='goodsP'>￥{{item.GoodsPrice}}</view>
+          <view class='goodsNum'>×{{item.GoodsNumber}}</view>
+        </view>
+      </view>
+    </view>
+    <view class='hr'></view>
+    <view class='orderInfo'>
+      <view class='text'>订单编号：{{information.OrderNo}}</view>
+      <view class='text'>订单时间：{{information.CreateDate}}</view>
+    </view>
+    <view class='hr'></view>
+    <view class='orderPrcie textPrice'>
+      <text>订单金额：</text>
+      <text>￥{{information.OrderPrice}}</text>
+    </view>
+    <view class='actualPrcie textPrice'>
+      <text>实际金额：</text>
+      <text>￥{{information.RealAmount}}</text>
+    </view>
+    <view class='hr'></view>
+    <view class='revenue textPrice'>
+      <text>预估收入：</text>
+      <text>￥{{information.EstimatedEevenue}}</text>
+    </view>
+  </view>
+</view>

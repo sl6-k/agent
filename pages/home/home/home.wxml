@@ -1,0 +1,128 @@
+<!--首页-->
+<view class='pages'>
+  <block wx:if="{{isComplete}}">
+    <view class='pages-hd' style='position:relative;'>
+      <image src='https://image.fitfix.shop/Agent/icon/home-bg.png' mode='aspectFill'></image>
+      <view class='spreadInfo'>
+        <view class='pages-hd-data'>
+          <view class='data'>
+            <view>余额(元)</view>
+            <text>{{agentAmount==null?0:agentAmount.IncomeMoney}}</text>
+          </view>
+          <view class='userInfo' bindtap='bindModifyUserInfo'>
+            <image src="{{userInfo.PictureUrl==''||userInfo.PictureUrl==undefined?'https://image.fitfix.shop/Agent/icon/logo.png':imgUrl+userInfo.PictureUrl}}" mode='scaleFill'></image>
+            <view class='ellipsis-1'>{{userInfo.TrueName==''?userInfo.UserName:userInfo.TrueName}}</view>
+          </view>
+        </view>
+        <view class='cash'>
+          <view style='color:#754c24;'>
+            <text>提现中(元)：</text>
+            <text>{{agentAmount==null?0:agentAmount.CashMoney}}</text>
+          </view>
+          <view bindtap='bindOpenCash'>
+            <text class='text' style=''>提现</text>
+          </view>
+        </view>
+      </view>
+    </view>
+    <!-- 公告 -->
+    <!-- <view class="weui_cells weui_cells_access">
+    <a class="weui_cell">
+      <view class="weui_cell_hd">
+        <image src="https://image.fitfix.shop/Agent/icon/notice.png" alt="icon"></image>
+      </view>
+      <view class="weui_cell_bd weui_cell_primary">
+        <p>教你如何玩转飞雳士教你如何玩转飞雳士教你如何玩转飞雳士</p>
+      </view>
+      <view class="weui_cell_ft"></view>
+    </a>
+  </view> -->
+    <!-- 宫格布局 -->
+    <view class='pages-bd margin-t-15'>
+      <view class="container">
+        <view class="weui-grids">
+          <view class="weui-grid" bindtap='openSpreadOrder'>
+            <view class='weui-grid__bg'>
+              <view class="weui-grid__icon">
+                <image src="https://image.fitfix.shop/Agent/icon/tuiguang.png" mode="scaleToFill" />
+                <view class='noReadCount' wx:if="{{cornerMarker!=null}}" style='display:{{cornerMarker.PromoteNumber==0 ?"none" : "block"}}'>
+                  <text class='noReadCounttext'> 
+            {{cornerMarker.PromoteNumber}}</text>
+                </view>
+              </view>
+              <text class="weui-grid__label">推广订单</text>
+            </view>
+          </view>
+
+          <view class="weui-grid" bindtap='openInvitation'>
+            <view class='weui-grid__bg'>
+              <view class="weui-grid__icon">
+                <image src="https://image.fitfix.shop/Agent/icon/yaoqing.png" mode="scaleToFill" />
+                <view class='noReadCount' wx:if="{{cornerMarker!=null}}" style='display:{{cornerMarker.WaitingAuditNumber==0 ?"none" : "block"}}'>
+                  <text class='noReadCounttext'> 
+            {{cornerMarker.WaitingAuditNumber}}</text>
+                </view>
+              </view>
+              <text class="weui-grid__label">我的邀请</text>
+            </view>
+          </view>
+
+          <view class="weui-grid" bindtap='openBudgetList'>
+            <view class='weui-grid__bg'>
+              <view class="weui-grid__icon">
+                <image src="https://image.fitfix.shop/Agent/icon/mingxi.png" mode="scaleToFill" />
+              </view>
+              <text class="weui-grid__label">收支明细</text>
+            </view>
+          </view>
+
+          <view class="weui-grid" bindtap='openCashNotice'>
+            <view class='weui-grid__bg'>
+              <view class="weui-grid__icon">
+                <image src="https://image.fitfix.shop/Agent/icon/tongzhi.png" mode="scaleToFill" />
+              </view>
+              <text class="weui-grid__label">提现进度</text>
+            </view>
+          </view>
+
+          <view class="weui-grid" bindtap='backToUser'>
+            <view class='weui-grid__bg'>
+              <view class="weui-grid__icon">
+                <image src="/image/backUser.png" mode="scaleToFill" />
+              </view>
+              <text class="weui-grid__label">返回商城</text>
+            </view>
+          </view>
+
+          <view class="weui-grid" bindtap='openSetting'>
+            <view class='weui-grid__bg'>
+              <view class="weui-grid__icon">
+                <image src="https://image.fitfix.shop/Agent/icon/set.png" mode="scaleToFill" />
+              </view>
+              <text class="weui-grid__label">设置中心</text>
+            </view>
+          </view>
+
+        </view>
+      </view>
+    </view>
+
+    <!-- 推广和邀请 -->
+    <view class='spread'>
+      <view class="padding-t-15 padding-b-15 padding-l-15 common" bindtap='bindOpenSpread' style='padding-right:8px;'>
+        <image src='https://image.fitfix.shop/Agent/icon/tgsp.png' mode='widthFix'></image>
+        <view class="title">
+          <view class='margin-b-5'>推广商品赢奖励</view>
+          <text>></text>
+        </view>
+      </view>
+      <view class="padding-t-15 padding-b-15 padding-r-15 common" bindtap='bindOpenInvitation' style='padding-left:15px;'>
+        <image src='https://image.fitfix.shop/Agent/icon/yqhy.png' mode='widthFix'></image>
+        <view class="title">
+          <view class='margin-b-5'>邀请好友共同推广</view>
+          <text>></text>
+        </view>
+      </view>
+    </view>
+  </block>
+</view>

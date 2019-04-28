@@ -1,0 +1,91 @@
+<view class='pages'>
+  <scroll-view class='bg-gray overflow' style='height:calc(100vh - {{navH}}px)' scroll-y>
+    <view class='hidden'>
+      <view class="weui_cells weui_cells_access dividingLine">
+        <a class="weui_cell font-size-14">
+          <view class="weui_cell_bd weui_cell_primary">
+            <p>头像</p>
+          </view>
+          <view class="weui-cell__bd">
+            <view class='avatar' bindtap='chooseImage'>
+              <image src="{{userInfo.PictureUrl==''?'https://image.fitfix.shop/Agent/icon/logo.png':pic+userInfo.PictureUrl}}" wx:if="{{userInfo.PictureUrl!=null||userInfo.PictureUrl!=undefined}}" mode='scaleFill'></image>
+            </view>
+          </view>
+          <view class="weui_cell_ft"></view>
+        </a>
+      </view>
+
+      <view class="weui_cells weui_cells_access dividingLine">
+        <a class="weui_cell font-size-14">
+          <view class="weui_cell_bd weui_cell_primary">
+            <p>昵称</p>
+          </view>
+          <view class="weui-cell__bd">
+            <input class="weui-input" type="text" placeholder="{{userInfo.NickName==''?'请输入昵称':userInfo.NickName}}" bindinput="modifyNickName" />
+          </view>
+          <view class="weui_cell_ft"></view>
+        </a>
+      </view>
+
+      <view class="weui_cells weui_cells_access dividingLine">
+        <a class="weui_cell font-size-14">
+          <view class="weui_cell_bd weui_cell_primary">
+            <p>真实姓名</p>
+          </view>
+          <view class="weui-cell__bd">
+            <input class="weui-input" type="text" placeholder="{{userInfo.TrueName==''?'请输入真实姓名':userInfo.TrueName}}" bindinput="modifyTrueName" />
+          </view>
+          <view class="weui_cell_ft"></view>
+        </a>
+      </view>
+
+      <view class="weui_cells weui_cells_access dividingLine">
+        <a class="weui_cell font-size-14" bindtap="selectSex">
+          <view class="weui_cell_bd weui_cell_primary">
+            <p>性别</p>
+          </view>
+          <view class="weui_cell_ft">{{userInfo.sex=="0"?'男':(userInfo.sex=="1"?'女':'请选择性别')}}</view>
+        </a>
+      </view>
+
+      <view class="weui_cells weui_cells_access dividingLine">
+        <a class="weui_cell font-size-14">
+          <view class="weui_cell_bd weui_cell_primary">
+            <p>手机号</p>
+          </view>
+          <view class="weui-cell__bd">
+            <input class="weui-input" disabled type="text" placeholder="{{userInfo.Phone==''?'请输入手机号':userInfo.Phone}}" bindinput="modifyPhoneNum" />
+          </view>
+          <view class="weui_cell_ft-arrow"></view>
+        </a>
+      </view>
+  </view>
+
+
+    <!-- <view class='margin-t-15'>
+      <view class="weui_cells weui_cells_access" bindtap='selectAddress'>
+        <a class="weui_cell font-size-14">
+          <view class="weui_cell_bd weui_cell_primary">
+            <p>我的收货地址</p>
+          </view>
+          <view class="weui_cell_ft">{{addressData == null?'添加收货地址':addressData}}</view>
+        </a>
+      </view>
+    </view>
+
+    <view class='margin-t-15'>
+      <view class="weui_cells weui_cells_access" bindtap='chooseInvoice'>
+        <a class="weui_cell font-size-14">
+          <view class="weui_cell_bd weui_cell_primary">
+            <p>我的发票</p>
+          </view>
+          <view class="weui_cell_ft">{{invoiceData.title==null?'添加增票资质':invoiceData.title}}</view>
+        </a>
+      </view>
+    </view> -->
+
+    <view class="margin-15">
+      <view class="weui_btn weui_btn_primary" bindtap='saveInformation'>保存</view>
+    </view>
+  </scroll-view>
+</view>

@@ -1,0 +1,90 @@
+<view class='pages'>
+  <view>
+
+    <view class="weui_cells weui_cells_access">
+      <a class="weui_cell font-size-14" bindtap="modifyPassword">
+        <view class="weui_cell_bd weui_cell_primary">
+          <p>修改密码</p>
+        </view>
+        <view class="weui_cell_ft"></view>
+      </a>
+    </view>
+    <view class="weui_cells weui_cells_access">
+      <a class="weui_cell font-size-14" bindtap="setBank">
+        <view class="weui_cell_bd weui_cell_primary">
+          <p>设置银行卡</p>
+        </view>
+        <view class="weui_cell_ft"></view>
+      </a>
+    </view>
+
+    <!-- <view class="weui_cells weui_cells_access" bindtap="modifyPhoneNum">
+      <a class="weui_cell font-size-14">
+        <view class="weui_cell_bd weui_cell_primary">
+          <p>修改手机号</p>
+        </view>
+        <view class="weui_cell_ft"></view>
+      </a>
+    </view> -->
+  </view>
+
+  <view class='margin-t-15'>
+    <view class="weui_cells weui_cells_access">
+      <a class="weui_cell font-size-14" bindtap="openCustomer">
+        <view class="weui_cell_bd weui_cell_primary">
+          <p>联系客服</p>
+        </view>
+        <view class="weui_cell_ft"></view>
+      </a>
+    </view>
+    <view class="weui_cells weui_cells_access">
+      <a class="weui_cell font-size-14" bindtap='about'>
+        <view class="weui_cell_bd weui_cell_primary">
+          <p>关于飞雳士</p>
+        </view>
+        <view class="weui_cell_ft"></view>
+      </a>
+    </view>
+  </view>
+
+  <view class='margin-t-15'>
+    <view class="weui_cells weui_cells_access">
+      <a class="weui_cell font-size-14" bindtap='bindUserSys'>
+        <view class="weui_cell_bd weui_cell_primary">
+          <p>飞雳士用户</p>
+        </view>
+        <view class="weui_cell_ft"></view>
+      </a>
+    </view>
+    <!-- <view class="weui_cells weui_cells_access">
+      <a class="weui_cell font-size-14" bindtap='bindSpreadSys'>
+        <view class="weui_cell_bd weui_cell_primary">
+          <p>飞雳士推客</p>
+        </view>
+        <view class="weui_cell_ft"></view>
+      </a>
+    </view> -->
+    <view class="weui_cells weui_cells_access">
+      <a class="weui_cell font-size-14" bindtap='bindStoreSys'>
+        <view class="weui_cell_bd weui_cell_primary">
+          <p>飞雳士门店</p>
+        </view>
+        <view class="weui_cell_ft"></view>
+      </a>
+    </view>
+    <view class="weui_cells weui_cells_access">
+      <a class="weui_cell font-size-14" bindtap='bindWorkerSys'>
+        <view class="weui_cell_bd weui_cell_primary">
+          <p>飞雳士工人</p>
+        </view>
+        <view class="weui_cell_ft"></view>
+      </a>
+    </view>
+  </view>
+
+  <div class="weui_opr_area" bindtap="logout">
+    <p class="weui_btn_area">
+      <a class="weui_btn weui_btn_primary  margin-l-15 margin-r-15">退出登录</a>
+    </p>
+  </div>
+</view>

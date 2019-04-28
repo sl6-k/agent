@@ -1,0 +1,68 @@
+/* pages/home/invitation/invitation.wxss */
+
+.container .steps {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+.container .steps {
+  position: relative;
+  counter-reset: step; /*创建步骤数字计数器*/
+}
+
+/*步骤描述*/
+
+.container .steps .li {
+  list-style-type: none;
+  font-size: 12px;
+  text-align: center;
+  width: 25%;
+  position: relative;
+  float: left;
+}
+
+/*步骤数字*/
+
+.container .steps .li:before {
+  display: block;
+  content: counter(step); /*设定计数器内容*/
+  counter-increment: step; /*计数器值递增*/
+  width: 25px;
+  height: 25px;
+  border: 2px solid #ffedd8;
+  /* background-color: #019875; */
+  line-height: 25px;
+  border-radius: 32px;
+  font-size: 12px;
+  color: #f7931e;
+  text-align: center;
+  font-weight: 700;
+  margin: 0 auto 8px auto;
+}
+
+/*连接线*/
+
+.container .steps .li ~ .li:after {
+  content: '';
+  width: 50%;
+  border: 1px dashed #ffedd8;
+  position: absolute;
+  left: -50%;
+  top: 15px;
+  z-index: 2222; /*放置在数字后面*/
+}
+
+.container .save {
+  background: #f7931e;
+  color: #fff;
+  text-align: center;
+  border-radius: 25px;
+}
+.tuiimge{
+  width:95%;
+  height:405.213px;
+  padding:0 16rpx;
+
+}

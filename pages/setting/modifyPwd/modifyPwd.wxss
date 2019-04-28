@@ -1,0 +1,54 @@
+.pages {
+  padding: 0 15px 15px 15px;
+  background: #fff;
+}
+
+.container {
+  background: #fff;
+}
+
+/* 去掉button的边框 */
+
+button::after {
+  border: none;
+}
+
+.all {
+  border-top: 1rpx solid #efefef;
+  height: 98rpx;
+  font-size: 28rpx;
+  display: flex;
+  align-items: center;
+}
+
+.all text {
+  width: 20%;
+}
+
+/* 验证码 */
+
+.verify {
+  text-align: center;
+  width: 30%;
+  margin-left: 15px;
+}
+
+.verifyCode {
+  border: 1px solid #ffb12a;
+  border-radius: 15px;
+  padding: 5px 10px;
+  color: #ffb12a;
+}
+
+button {
+  height: 80rpx;
+  background-color: #ffb12a;
+  font-size: 30rpx;
+  color: #fff;
+  border-radius: 8px;
+  margin: 50rpx auto;
+}
+
+.submit.active {
+  background: none;
+}

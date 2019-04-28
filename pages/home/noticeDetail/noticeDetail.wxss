@@ -1,0 +1,6 @@
+/* pages/home/noticeDetail/noticeDetail.wxss */
+.container{
+  /* background: #fff; */
+  border-top: 1px solid #fafafa;
+}
+

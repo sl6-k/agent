@@ -1,0 +1,27 @@
+<!--pages/home/budgetList/budgetList.wxml-->
+<view class='container' style='border-top:1px solid #eee;'>
+  <view wx:for="{{information}}" wx:key style='display:flex;flex:1;padding:15px;border-bottom:1px solid #eee;'  bindtap='invitationDetailsrun' data-username='{{item.UserName}}' data-userid="{{item.UserID}}" data-createdate="{{item.User_dateGreate}}">
+    <view style='margin-right:15px;' >
+      <image src='{{item.PictureUrl==""?"https://image.fitfix.shop/shop/banner/logo.png":imgUrl+item.PictureUrl}}' mode='aspcetFill' style='width:50px;height:50px;border-radius:50%;'></image>
+    </view>
+    <view style='display:flex;flex-wrap:nowrap;justify-content:space-between;width:80%;'>
+      <view class='padding-t-5 padding-b-5' style=''>
+        <view class='margin-b-5'>{{item.TrueName==''?item.Phone:item.TrueName}}</view>
+        <view style='color:#9a9a9a;font-size:12px;'>{{item.User_dateGreate}}</view>
+      </view>
+      <!-- <view class='padding-t-5'>{{item.Phone}}</view> -->
+    
+    </view>
+  </view>
+  <view class='loadingMsg' wx:if='{{noMoreShow && information != null}}'>
+    <text>~~没有更多了~~</text>
+  </view>
+  <view class='none' wx:if='{{information == "" || information == null || information == undefined}}'>
+    <view class='icon'>
+      <image src='https://image.fitfix.shop/shop/icon/none.png' mode='widthFix'></image>
+    </view>
+    <view class='loadingMsg'>
+      <text>~~暂无数据~~</text>
+    </view>
+  </view>
+</view>

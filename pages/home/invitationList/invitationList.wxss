@@ -1,0 +1,10 @@
+/* pages/home/budgetList/budgetList.wxss */
+.container{
+  background: #fff;
+}
+.loadingMsg {
+  text-align: center;
+  font-size: 14px;
+  color: #ccc;
+  padding: 10px 0;
+}

@@ -1,0 +1,175 @@
+/* pages/home/invitationDetails/invitationDetails.wxss */
+.container{
+  background: white;
+  margin: 0;
+}
+.logo{
+  width: 80px;
+  height: 80px;
+  margin: 0 auto;
+  padding: 10px 0;
+}
+.logo image{
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+.budgetMoney{
+  width: 100%;
+  font-size: 14px;
+  /* font-weight: bold; */
+  text-align: left;
+  margin-top: 15px;
+  padding: 0 15px;
+  display: inline-block;
+}
+.budgetuser{
+  width: 100%;
+  font-size: 14px;
+  font-weight: bold;
+  padding-left:5px;
+  float: left;
+  margin-bottom: 10px;
+}
+.budgetuser text{
+   color:rgb(253, 184, 93);
+}
+.hr{
+  width: 90%;
+  margin: 15px auto;
+  height: 1px;
+  background: #f0f0f0;
+}
+.budgetInfo{
+  padding-left: 15px;
+}
+.budgetInfo text{
+  display: block;
+  font-size: 14px;
+  font-weight: 400;
+  text-align: left;
+  margin: 20px 0;
+}
+buttom {
+  width: 100%;
+  height: 44px;
+  background: #fff;
+  margin-top: 1.6vw;
+  display: flex;
+  flex-direction: row;
+  position: fixed;
+  bottom: 0;
+  border-top: 1px solid #eee;
+  padding-right: 15px;
+  justify-content: flex-end;
+  align-items: center;
+  
+}
+
+.button {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 5px;
+  margin-right: 15px;
+}
+
+.container {
+  border-top: 1px solid rgb(238, 238, 238);
+}
+
+.flex {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+}
+
+.flex-1 {
+  display: flex;
+  flex: 1;
+}
+
+/* 弹出层样式 */
+
+.layerBox {
+  /* display: none; */
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0px;
+  bottom: 0;
+  overflow: hidden;
+  z-index: 999999;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.layerBox .closeCustomer {
+  position: absolute;
+  z-index: 10001;
+  right: 0px;
+  top: 0px;
+  width: 30px;
+  height: 30px;
+}
+
+.layerBox .content {
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate3d(-50%, -50%, 0);
+  /* z-index: 9999999; */
+  width: 320px;
+  height: 200px;
+  background: #fff;
+  border-radius: 15px;
+  padding-top: 15px;
+}
+
+.layerBox .content .content-auto {
+  margin: 0 auto;
+  font-size: 16px;
+}
+
+.layerBox .content .bg {
+  width: 100%;
+  display: block;
+}
+
+.layerBox .content .box {
+  width: 280px;
+  height: 150px;
+}
+
+.layerBox .submit-btn {
+  color: #fff;
+  text-align: center;
+  width: 100%;
+}
+
+.layerBox .submit-btn .confirm {
+  display: inline-block;
+  background: #ffb12a;
+  padding: 10px 30px;
+  border-radius: 10px;
+}
+
+.customerService {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  text-align: center;
+}
+
+.font-color{
+  color:  #ffb12a;
+}
+.tuiguang{
+ width: 90%;
+ border:1px solid #eee;
+ border-radius: 15px;
+ margin: auto;
+ padding:8px 5px;
+}

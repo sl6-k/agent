@@ -1,0 +1,21 @@
+<!--pages/home/spread/spread.wxml-->
+<view class="container">
+  <view style='background:#fff;border-top:1rpx solid #E5E5E5;'>
+    <view class="steps">
+      <view class='li'>分享给好友</view>
+      <view class='li'>好友注册</view>
+      <view class="li">成为推广员</view>
+    </view>
+  </view>
+
+  <view class='padded-15'>
+    <image src='{{paymentCode}}' class='tuiimge' mode='widthFix' data-img="{{paymentCode}}" bindtouchstart='timestart' bindtouchend='timeend' bindtap='saveImg'></image>
+    <text style='color:#ccc;text-align:center;display:block;width:100%'>长按保存二维码</text>
+  </view>
+
+  <!-- 按钮 -->
+  <view class='padding-l-15 padding-r-15'>
+    <view class='margin-r-15 margin-l-15 margin-b-15 padding-t-15 padding-b-15 save' bindtap='openRule'>推广规则</view>
+  </view>
+
+</view>

@@ -1,0 +1,267 @@
+/* pages/home/home.wxss */
+
+.pages-hd{
+   height: 180px;
+}
+
+.pages-hd image {
+  width: 100%;
+  height: 100%;
+}
+
+.pages .pages-hd .spreadInfo {
+  position: absolute;
+  width: 100%;
+  top: 0px;
+  padding-bottom: 15px;
+}
+
+.pages .pages-hd .pages-hd-data {
+  border-bottom: 1rpx solid #e1c547;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  margin: 0px 15px 15px 15px;
+}
+
+.pages .pages-hd .pages-hd-data .data {
+  padding: 15px 0;
+}
+
+.pages .pages-hd .pages-hd-data .data text {
+  font-size: 32px;
+  color: #603813;
+}
+
+.pages .pages-hd .pages-hd-data .data view {
+  margin-bottom: 10px;
+  color: #a67c52;
+}
+
+.pages .pages-hd-data .userInfo {
+  padding: 15px 0 15px 15px ;
+  text-align: center;
+  color: #754c24;
+}
+
+.pages .pages-hd-data .userInfo image {
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 50%;
+  border: 2px solid #fff;
+}
+
+.spreadInfo .cash .text {
+  border: 1px solid #754c24;
+  border-radius: 25px;
+  padding: 5px 25px;
+  color: #754c24;
+}
+
+.spreadInfo .cash {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  margin: 15px;
+}
+
+/* 公告部分开始 */
+
+.weui_cells {
+  margin-top: 15px;
+}
+
+.weui_cells .weui_cell_hd image {
+  width: 100rpx;
+  height: 50rpx;
+  margin-right: 15px;
+  display: block;
+}
+
+.weui_cells .weui_cell_bd {
+  margin-left: 15px;
+  font-size: 14px;
+  color: #999;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* 公告部分结束 */
+
+/* 宫格布局开始 */
+
+.weui-grids {
+  position: relative;
+  overflow: hidden;
+  background: #fff;
+}
+
+.weui-grids:before {
+  content: " ";
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  height: 1px;
+  border-top: 0px solid #d9d9d9;
+  color: #d9d9d9;
+  -webkit-transform-origin: 0 0;
+  transform-origin: 0 0;
+  -webkit-transform: scaleY(0.5);
+  transform: scaleY(0.5);
+}
+
+.weui-grids:after {
+  content: " ";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 1px;
+  bottom: 0;
+  border-left: 0px solid #d9d9d9;
+  color: #d9d9d9;
+  -webkit-transform-origin: 0 0;
+  transform-origin: 0 0;
+  -webkit-transform: scaleX(0.5);
+  transform: scaleX(0.5);
+}
+
+.weui-grid {
+  position: relative;
+  float: left;
+  padding: 15px 10px;
+  width: 33%;
+  box-sizing: border-box;
+}
+
+.weui-grid:before {
+  content: " ";
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 1px;
+  bottom: 0;
+  border-right: 0px solid #e5e5e5;
+  color: #d9d9d9;
+  -webkit-transform-origin: 100% 0;
+  transform-origin: 100% 0;
+  -webkit-transform: scaleX(0.5);
+  transform: scaleX(0.5);
+}
+
+.weui-grid:after {
+  content: " ";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  height: 1px;
+  border-bottom: 0px solid #e5e5e5;
+  color: #d9d9d9;
+  -webkit-transform-origin: 0 100%;
+  transform-origin: 0 100%;
+  -webkit-transform: scaleY(0.5);
+  transform: scaleY(0.5);
+}
+
+.weui-grid:active {
+  background-color: none;
+}
+
+.weui-grid__bg {
+  position: relative;
+  float: left;
+  padding: 0px 0px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.weui-grid__icon {
+  width: 40px;
+  height: 40px;
+  margin: 0 auto;
+  padding-right: 5px;
+}
+
+.weui-grid__icon image {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.weui-grid__icon + .weui-grid__label {
+  margin-top: 10px;
+}
+
+.weui-grid__label {
+  display: block;
+  text-align: center;
+  color: #666;
+  font-size: 16px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.weui-grid {
+  position: relative;
+  float: left;
+  padding: 15px;
+  box-sizing: border-box;
+  border-right: 0rpx solid #e5e5e5;
+  border-bottom: 0rpx solid #e5e5e5;
+}
+
+.weui-grids {
+  border-top: 0rpx solid #e5e5e5;
+  border-left: 0rpx solid #e5e5e5;
+  overflow: hidden;
+}
+
+/* 宫格布局结束 */
+
+/* 邀请和推广 */
+
+.spread {
+  display: flex;
+  flex: 1;
+  margin-top: 15px;
+  background: #fff;
+}
+
+.spread .common {
+  width: 50%;
+  position: relative;
+}
+
+.spread .common image {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.spread .common .title {
+  position: absolute;
+  top:30%;
+  font-size: 15px;
+  left: 25px;
+  color: #fff;
+}
+
+.noReadCount{
+  width:20px;
+  height:20px;
+  line-height:14rpx;
+  background-color:#f05a24;
+  border-radius:50%;
+  position:absolute;
+  bottom:55px;
+  left:55px;
+  text-align:center;
+}
+.noReadCounttext{
+  color:#ffffff;
+  font-size:24rpx;
+  display:inline-block;
+  text-align:center;
+}

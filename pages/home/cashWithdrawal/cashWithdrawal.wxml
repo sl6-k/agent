@@ -1,0 +1,118 @@
+<!--提现-->
+<view class='pages'>
+  <view>
+    <view class='cashier-method'>
+      <view style='padding: 5px 15px;'>请选择提现方式</view>
+      <view style='background:#fff;'>
+        <view class='padded-15 radio-text' style='display:flex;flex:1;align-items:Center;' bindtap='shift1'>
+          <image src='https://image.fitfix.shop/Agent/icon/bank.png' mode='widthFix' style='width:30px;'></image>
+          <view class='margin-l-15'>提现到银行卡</view>
+          <image class='radio-img' mode='widthFix' src='{{type==1?"https://image.fitfix.shop/Agent/icon/radio.png":"https://image.fitfix.shop/Agent/icon/radio2.png"}}'></image>
+        </view>
+      </view>
+      <view style='background:#fff;border-top: 1px solid #ccc;' bindtap='shift2'>
+        <view class='padded-15 radio-text' style='display:flex;flex:1;align-items:Center;'>
+          <image src='https://image.fitfix.shop/Agent/icon/alipay.png' mode='widthFix' style='width:30px;'></image>
+          <view class='margin-l-15'>提现到支付宝</view>
+          <image class='radio-img' mode='widthFix' src='{{type==2?"https://image.fitfix.shop/Agent/icon/radio.png":"https://image.fitfix.shop/Agent/icon/radio2.png"}}'></image>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class='pages-bd margin-t-15' wx:if="{{type == 1}}">
+    <view class="weui_cells weui_cells_access">
+      <a class="weui_cell font-size-14" bindtap="choiceBank">
+        <view class="weui_cell_bd weui_cell_primary">
+          <p>开户行</p>
+        </view>
+        <picker bindchange="bindPickerChange" value="{{index}}" range="{{BankList}}">
+          <view class="{{Bank == null || Bank==undefined||Bank==''?'picker':''}}">
+            {{Bank == null || Bank==undefined||Bank=='' ? '请选择银行' : Bank}}
+          </view>
+        </picker>
+        <view class="weui_cell_ft"></view>
+      </a>
+    </view>
+    <view class="weui_cells weui_cells_access">
+      <a class="weui_cell font-size-14">
+        <view class="weui_cell_bd weui_cell_primary">
+          <p>开户名</p>
+        </view>
+        <view class="weui-cell__bd">
+          <input class="weui-input" type="text" placeholder="{{Account==''||Account==undefined||Account==null?'请输入开户名':Account}}" bindinput="getAccount" />
+        </view>
+        <view class="weui_cell_ft"></view>
+      </a>
+    </view>
+    <view class="weui_cells weui_cells_access">
+      <a class="weui_cell font-size-14">
+        <view class="weui_cell_bd weui_cell_primary">
+          <p>银行卡号</p>
+        </view>
+        <view class="weui-cell__bd">
+          <input class="weui-input" type="number" placeholder="{{AccountNo==''||AccountNo==undefined||AccountNo==null?'请输入银行卡号':AccountNo}}" bindinput="getAccountNo" />
+        </view>
+        <view class="weui_cell_ft"></view>
+      </a>
+    </view>
+  </view>
+  <view style='margin-top: 15px;' wx:if="{{type == 2}}">
+    <view class="weui_cells weui_cells_access">
+      <a class="weui_cell font-size-14">
+        <view class="weui_cell_bd weui_cell_primary">
+          <p>支付宝账户名</p>
+        </view>
+        <view class="weui-cell__bd">
+          <input class="weui-input" type="text" placeholder="请输入账户姓名" bindinput="getAccount" />
+        </view>
+        <view class="weui_cell_ft"></view>
+      </a>
+    </view>
+    <view class="weui_cells weui_cells_access">
+      <a class="weui_cell font-size-14">
+        <view class="weui_cell_bd weui_cell_primary">
+          <p>支付宝账号：</p>
+        </view>
+        <view class="weui-cell__bd">
+          <input class="weui-input" type="text" style='text-align:right;' placeholder="请输入支付宝账号" value="{{AccountNo}}" bindinput="getAccountNo" />
+        </view>
+        <view class="weui_cell_ft"></view>
+      </a>
+    </view>
+  </view>
+
+
+  <!-- <view class="weui_cells weui_cells_access">
+    <a class="weui_cell font-size-14">
+      <view class="weui_cell_bd weui_cell_primary">
+        <p>支付宝名称：</p>
+      </view>
+      <view class="weui-cell__bd">
+        <input class="weui-input" style='text-align:right;' type="text" placeholder="请输入支付宝名称" value="{{Account}}" bindinput="bindGetAccount" />
+      </view>
+      <view class="weui_cell_ft"></view>
+    </a>
+  </view> -->
+
+  <view class='cashAmount margin-t-15'>
+    <view class="weui_cells weui_cells_access padded-15 font-size-14">
+      <view style='color:#868686;'>提现金额</view>
+      <view style='display:flex;flex:1; border-bottom:1rpx solid #f3f0f0;padding:5px;'>
+        <text class='' style='font-size:20px;'>￥</text>
+        <input class="weui-input-money" type="digit" style='font-size:20px;font-weight:bold;margin-top:7px;' placeholder='0' value="{{cashAmount}}"  bindinput='getCashAmount' />
+      </view>
+      <view class='margin-t-10' style='display:flex;flex-wrap:nowrap;justify-content:space-between;font-size:12px;'>
+        <view style='width:40%; color:#868686;' wx:if="{{cashAmount==null}}">可用余额
+          <text>{{amount}}</text>元</view>
+        <view style='width:75%; color:#868686;' wx:if="{{cashAmount!=null&&cashAmount<=amount}}">额外扣除￥0.01手续费(费率0.1%)</view>
+        <view style='width:75%; color:#ea0e0e;' wx:if="{{cashAmount>amount}}">输入金额超过零钱余额</view>
+        <view style='text-align:right;color:#ffb12a;' bindtap='getAllWithdrawals' wx:if="{{cashAmount==null ||cashAmount<amount}}">全部提现</view>
+      </view>
+    </view>
+  </view>
+  <view class="weui_opr_area button-b margin-l-15 margin-r-15" bindtap="{{cashAmount==null||cashAmount>=amount?'':'bindCashWithdrawal'}}">
+    <p class="weui_btn_area">
+      <a href="javascript:;" class="weui_btn padding-t-5 padding-b-5 {{cashAmount==null||cashAmount>=amount?'btn-bg':'btn-bg-select'}}" disabled="cashAmount==null||cashAmount>=amount?'disabled':''">确认提现</a>
+    </p>
+  </view>
+</view>

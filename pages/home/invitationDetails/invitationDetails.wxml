@@ -1,0 +1,58 @@
+<!--pages/home/invitationDetails/invitationDetails.wxml-->
+<view class='container'>
+<!-- 当前user -->
+ <!-- <view style='background:#fff;padding-left:10px' class='margin-t-15'>
+      <view class='flex-1'>
+        <view class='margin-r-10' style='height:20px;background:#ffb12a;width:3px;border-radius:15px;color:#616161;'></view>
+       <text class='budgetuser'>我：<text>{{my}}</text></text>
+      </view>  
+ </view> -->
+ <!--邀请人信息  -->
+
+  <view class='logo'>
+   <image src="{{item.PictureUrl ==undefined||item.PictureUrl==''?'https://image.fitfix.shop/shop/banner/logo.png':pic+item.PictureUrl}}" mode='scaleFill'></image>
+  </view>
+  <text class='budgetMoney'>被邀请人：{{UserName}}</text>
+  <text class='budgetMoney'>注册时间：{{CreateDate}}</text>
+  <view class='hr'></view>
+  <!-- 他的邀请 -->
+  <view style='background:#fff;padding-left:10px' class='margin-t-15'>
+      <view class='flex-1'>
+        <view class='margin-r-10' style='height:20px;background:#ffb12a;width:3px;border-radius:15px;color:#616161;'></view>
+        <text>他的邀请</text>
+      </view> 
+      <view class='padded-15 flex' wx:for='{{invitationDetails}}' wx:key>
+        <view style='display: flex;align-items: center' >
+          <image src="{{item.PictureUrl ==undefined||item.PictureUrl==''?'https://image.fitfix.shop/shop/banner/logo.png':pic+item.PictureUrl}}"  style='width:40px;height:40px;border-radius:50%;'></image>
+        </view>
+        <view style='color:#ffb12a;width:75%;display: flex;align-items: center'>
+          <view>
+            <block>
+              <view>{{item.UserName}}</view>
+            </block>
+          </view>
+        </view>
+        <view style='display: flex;align-items: center'>
+          <image src='https://image.fitfix.shop/shop/icon/rightIcon.png' mode='widthFix' style='width:20px;'></image>
+        </view>
+      </view>
+      <view  wx:if="{{invitationDetails==''}}" style=' text-align: center;padding:10px;color:#eee'>暂时没有</view>
+ </view>
+  <view class='hr'></view>
+ <!-- 他的推广 -->
+  <view style='background:#fff;' class='margin-t-15'>
+      <view class='flex-1' style='padding-left:10px;padding-bottom:10px' >
+        <view class='margin-r-10' style='height:20px;background:#ffb12a;width:3px;border-radius:15px;color:#616161;'></view>
+        <text>他的推广</text>
+      </view>
+      <view class='tuiguang' wx:for="{{generalizeOrderList}}" wx:key>
+          <view class='flex'>
+            <view>订单编号：{{item.OrderNo}}</view>
+            <view class='font-color'>{{item.OrderStateName}}</view>
+          </view>
+          <view class='ell-rows-2'>订单时间{{item.CreateDate }} </view>
+      </view>  
+       <view  wx:if="{{generalizeOrderList==''}}" style=' text-align: center;padding:10px;color:#eee'>暂时没有</view>
+ </view>
+ 
+</view>
